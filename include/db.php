@@ -1,5 +1,5 @@
 <?php
-  $db_host = 'localhost:8889';
+  $db_host = 'localhost';
   $db_user = 'root';
   $db_password = 'root';
   $db_db = 'basket';
@@ -11,7 +11,13 @@
     $db_password,
     $db_db
   );
-  $db = mysqli_connect($mysqli);
+
+  $conn = mysqli_connect(
+    'localhost',
+    'root',
+    'root',
+    'basket');
+  //$db = mysqli_connect($mysqli);
 	
   if ($mysqli->connect_error) {
     echo 'Errno: '.$mysqli->connect_errno;

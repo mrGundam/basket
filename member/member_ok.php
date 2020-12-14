@@ -8,14 +8,10 @@
 	$sex = $_POST['sex'];
 	$email = $_POST['email'].'@'.$_POST['emadress'];
 
-  $sql = "insert into member (idx,id,pw,name,adress,sex,email) values('2','".$userid."','".$userpw."','".$username."','".$adress."','".$sex."','".$email."')";
+  $sql = "insert into member (id,pw,name,adress,sex,email) values('".$userid."','".$userpw."','".$username."','".$adress."','".$sex."','".$email."')";
   $mysqli->query($sql);
-  if($mysqli->query($sql)){
-    echo 's';
-  } else {
-    echo 'x';
-  }
+
 ?>
 <meta charset="utf-8" />
 <script type="text/javascript">alert('회원가입이 완료되었습니다.');</script>
-<meta http-equiv="refresh" content="0 url=/">
+<meta http-equiv="refresh" content="0 url=/basket/member/">
