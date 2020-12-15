@@ -17,6 +17,7 @@
 
     if(password_verify($password, $hash_pw)) //만약 password변수와 hash_pw변수가 같다면 세션값을 저장하고 알림창을 띄운후 main.php파일로 넘어갑니다.
 	{
+		session_start();
 		$_SESSION['userid'] = $member["id"];
 		$_SESSION['userpw'] = $member["pw"];
 
