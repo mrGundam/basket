@@ -18,7 +18,8 @@
     'root',
     'basket');
   //$db = mysqli_connect($mysqli);
-	
+  
+  
   if ($mysqli->connect_error) {
     echo 'Errno: '.$mysqli->connect_errno;
     echo '<br>';
